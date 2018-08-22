@@ -1,34 +1,63 @@
-store_item.rb
-
-
 class Items
-
-  attr_reader :type, :price, :color
-  attr_writer :type, :price, :color
-
   def initialize (input_options)
-    @type = input_type
-    @price = input_price
-    @color = input_color
-  end
-  
-  def print_info
-    puts"#{ @type } #{ @color } is #{ @price } ."  
+    @type = input_options[:type]
+    @price = input_options[:price]
+    @color = input_options[:color]
   end
 end
 
+class Shoes < Items
+  def initialize(input_options)
+    super(input_options) 
+    p (input_options)
+  end
+end
 
-shoes = Items.new( 
+class Pants < Items
+  def initialize(input_options)
+    super(input_options)
+    p (input_options) 
+  end
+end
+
+class Tops < Items
+  def initialize(input_options)
+    super(input_options)
+    p (input_options) 
+  end
+end
+
+class Food < Items
+  def initialize(input_options)
+    super(input_options)
+    p (input_options) 
+  end
+
+  def shelf_life
+    puts "NEVER"
+  end  
+end
+
+shoes = Shoes.new( 
                   type: "Gym Shoes", 
                   price: 25, 
                   color: "white"
-                    )
-pants = Items.new(
+                  )
+pants = Pants.new(
                   type: "Jeans", 
                   price: 15, 
                   color: "blue" 
-                    )
-clothes = Items.new(
-                    type: "tee_shirt", 
-                    price: 2, 
-                    color: "black" )
+                  )
+tops = Tops.new(
+                type: "tee_shirt", 
+                price: 2, 
+                color: "black" 
+                )
+
+food = Food.new(
+                type: "can_food",
+                price: 1,
+                color: "multi_color"
+                )
+
+p Shoes
