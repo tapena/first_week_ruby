@@ -1,40 +1,34 @@
 store_item.rb
-clothes = { type: "tee_shirt", price: 2, color: "black" }
-pants = { type: "Jeans", price: 15, color: "blue" }
-shoes = { type: "Gym Shoes", price: 25, color: "white" }
+
 
 class Items
-  def initialize (input_type, input_price, input_color)
+
+  attr_reader :type, :price, :color
+  attr_writer :type, :price, :color
+
+  def initialize (input_options)
     @type = input_type
     @price = input_price
     @color = input_color
   end
   
   def print_info
-    puts "#{ @type } #{ @color } is #{ @price } ."  
+    puts"#{ @type } #{ @color } is #{ @price } ."  
   end
-  
-  def type
-    @type
-  end
-  
-  def price
-    @price
-  end
-  
-  def color
-    @color
-  end  
+end
 
-  def type=(new_value)
-    @type = new_value    
-  end
 
-  def price=(new_value)
-    @price = new_value
-  end
-  
-  def color
-    @color
-  end  
-
+shoes = Items.new( 
+                  type: "Gym Shoes", 
+                  price: 25, 
+                  color: "white"
+                    )
+pants = Items.new(
+                  type: "Jeans", 
+                  price: 15, 
+                  color: "blue" 
+                    )
+clothes = Items.new(
+                    type: "tee_shirt", 
+                    price: 2, 
+                    color: "black" )
