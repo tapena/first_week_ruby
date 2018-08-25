@@ -13,7 +13,7 @@ end
 class Car < Vehicle
 
   def initialize(input_options)
-    super(input_options) 
+    super( ) 
     p (input_options)
   end
 
@@ -33,7 +33,7 @@ end
 class Bike < Vehicle
 
   def initialize(input_options)
-    super(input_options)
+    super( )
     p (input_options) 
   end
   
@@ -50,7 +50,8 @@ class Bike < Vehicle
   end  
 end
 
-car = Car.new(type: "SUV", 
+car = Car.new(
+              type: "SUV", 
               speed: 0, 
               fuel: "electric", 
               direction: "north", 
@@ -60,7 +61,8 @@ car = Car.new(type: "SUV",
               )
 
 
-bike = Bike.new(type: "two_wheel_bike", 
+bike = Bike.new(
+                type: "two_wheel_bike", 
                 fuel: "pedal", 
                 speed: 0, 
                 direction: "north", 
@@ -68,3 +70,5 @@ bike = Bike.new(type: "two_wheel_bike",
                 accelerate: 10, 
                 new_direction: "turn"
                 )
+
+p Car
