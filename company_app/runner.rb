@@ -28,4 +28,3 @@ intern = Actualize::Intern.new(
                     active: true,
                     )
 
-p employee_2

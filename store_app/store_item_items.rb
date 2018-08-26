@@ -13,13 +13,14 @@ module Storefront
       @total = @price * @tax
     end
 
-    def print_info
-      puts "#{type} only have it in #{color} and #{size}." 
+    def speak_to_customer
+      puts "We only carry #{type} in #{color} and #{size}." 
     end  
   end
 end
 
-p Items.print_info
+
+
 
 
 

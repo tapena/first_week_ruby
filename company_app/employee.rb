@@ -1,4 +1,7 @@
+require "./runner.rb"
+
 module Actualize
+
   class Employee
     attr_reader :first_name, :last_name, :salary, :active
     attr_writer :first_name, :last_name, :active
@@ -16,10 +19,7 @@ module Actualize
 
     def give_annual_raise
       @salary = @salary * 1.05
-    end
+    end 
   end  
 end  
-
-
-
 

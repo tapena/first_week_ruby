@@ -14,4 +14,3 @@ module Storefront
   end
 end
 
-p Storefront.shelf_life
