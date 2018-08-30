@@ -1,4 +1,4 @@
-require "./Reportable.rb"
+require "./reportable.rb"
 require "./employee.rb"
 
 module Actualize

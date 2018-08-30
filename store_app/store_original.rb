@@ -94,4 +94,4 @@ food = Storefront::Food.new(
                 tax: 1.5
                 )
 
-p tax
+p speak_to_customer
